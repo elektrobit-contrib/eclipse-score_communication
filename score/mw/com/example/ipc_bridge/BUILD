@@ -29,9 +29,6 @@ cc_binary(
         "@score-baselibs//score/language/futurecpp",
         "@boost.program_options",
     ],
-    visibility = [
-        "//visibility:public", # platform_only
-    ],
 )
 
 cc_library(
