@@ -20,6 +20,12 @@ on:
     types: [opened, reopened, synchronize]
   merge_group:
     types: [checks_requested]
+
+# run as non root, maybe there is a better way to achieve this
+defaults:
+  run:
+    shell: su vscode -c "bash -e {0}"
+
 jobs:
     build_and_test_gcc_host_gcc12:
       runs-on: ubuntu-24.04
